@@ -1,26 +1,22 @@
 package org.bill.quantity;
 
-import org.hamcrest.CoreMatchers;
 import org.junit.Test;
 
 import static org.bill.quantity.Units.CUP;
 import static org.junit.Assert.assertThat;
+import static org.junit.matchers.JUnitMatchers.containsString;
 
 public class QuantityTest {
 
     @Test
-    public void testToString() throws Exception {
+    public void toStringShouldIncludeAmountWhenItIsOne() {
         Quantity quantity = new Quantity(1, CUP);
-        assertThat(quantity.toString(), CoreMatchers.is("1 cup"));
+        assertThat(quantity.toString(), containsString("1"));
     }
 
     @Test
-    public void testAnd() throws Exception {
-
-    }
-
-    @Test
-    public void testAs() throws Exception {
-
+    public void toStringShouldIncludeAmountWhenItIsTwo() {
+        Quantity quantity = new Quantity(2, CUP);
+        assertThat(quantity.toString(), containsString("2"));
     }
 }

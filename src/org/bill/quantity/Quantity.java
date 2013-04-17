@@ -1,7 +1,10 @@
 package org.bill.quantity;
 
 public class Quantity {
+    private final Integer amount;
+
     public Quantity(int amount, Units units) {
+        this.amount = amount;
     }
 
     public Quantity and(Quantity quantity) {
@@ -14,6 +17,6 @@ public class Quantity {
 
     @Override
     public String toString() {
-        return "1 cup";
+        return amount.toString();
     }
 }
