@@ -2,9 +2,11 @@ package org.bill.quantity;
 
 public class Quantity {
     private final Integer amount;
+    private final Units units;
 
     public Quantity(int amount, Units units) {
         this.amount = amount;
+        this.units = units;
     }
 
     public Quantity and(Quantity quantity) {
@@ -17,6 +19,6 @@ public class Quantity {
 
     @Override
     public String toString() {
-        return amount.toString();
+        return amount.toString() + " " + units.toString();
     }
 }
