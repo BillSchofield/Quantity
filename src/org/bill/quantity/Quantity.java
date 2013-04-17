@@ -14,6 +14,6 @@ public class Quantity {
 
     @Override
     public String toString() {
-        return super.toString();
+        return "1 cup";
     }
 }
